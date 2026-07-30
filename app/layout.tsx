@@ -18,15 +18,22 @@ const body = Manrope({
   subsets: ["latin"],
 });
 
+const publicSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  "https://ritmo-e-melodia-bp.magaohehe.chatgpt.site";
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: "Ritmo & Melodia | Instrumentos e Luthieria",
   description:
     "Instrumentos musicais novos e usados, acessórios e luthieria em Bragança Paulista.",
-  metadataBase: new URL("https://ritmo-e-melodia-bp.chatgpt.site"),
+  metadataBase: new URL(publicSiteUrl),
   openGraph: {
     title: "Ritmo & Melodia",
     description: "Instrumentos, acessórios e luthieria em Bragança Paulista.",
-    images: [{ url: "/social-card.png", width: 1733, height: 909 }],
+    images: [
+      { url: `${publicBasePath}/social-card.png`, width: 1733, height: 909 },
+    ],
   },
 };
 

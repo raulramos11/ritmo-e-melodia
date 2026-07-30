@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useRef } from "react";
 import { CONTACT } from "../data/site";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
@@ -53,7 +55,7 @@ export function Hero() {
           style={reduced ? undefined : { y: imageY }}
         >
           <Image
-            src="/guitar-close.jpg"
+            src={`${basePath}/guitar-close.jpg`}
             alt="Detalhe de uma guitarra"
             fill
             unoptimized

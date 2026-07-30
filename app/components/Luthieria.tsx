@@ -2,13 +2,15 @@ import Image from "next/image";
 import { CONTACT } from "../data/site";
 import { Reveal } from "./Reveal";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Luthieria() {
   return (
     <section className="luthieria section" id="luthieria">
       <div className="luthieria-grid shell">
         <Reveal className="workshop-photo">
           <Image
-            src="/store-wall.jpg"
+            src={`${basePath}/store-wall.jpg`}
             alt="Parede com instrumentos musicais"
             fill
             unoptimized
