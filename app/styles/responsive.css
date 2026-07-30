@@ -1,0 +1,192 @@
+@media (max-width: 900px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-grid,
+  .luthieria-grid,
+  .section-heading,
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    padding-top: 70px;
+  }
+
+  .hero-copy {
+    padding-right: 0;
+  }
+
+  .hero-visual {
+    height: 520px;
+    margin: 50px 0 0;
+  }
+
+  .category-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-list > div:nth-child(3) .category-card {
+    border-left: 1px solid var(--ink);
+  }
+
+  .category-card {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .address-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-main > div {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .shell {
+    width: min(calc(100% - 28px), 1240px);
+  }
+
+  .section {
+    padding-block: 82px;
+  }
+
+  .nav {
+    min-height: 72px;
+  }
+
+  .nav-cta {
+    padding: 9px 10px;
+    font-size: 0.58rem;
+  }
+
+  .brand {
+    gap: 5px;
+    font-size: 1rem;
+  }
+
+  .hero-grid {
+    min-height: 0;
+    padding-block: 62px 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.3rem, 22vw, 6.1rem);
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-visual {
+    height: 420px;
+    min-height: 0;
+  }
+
+  .disc {
+    left: 13px;
+    bottom: 20px;
+    width: 85px;
+    height: 85px;
+  }
+
+  .visual-note {
+    right: -66px;
+  }
+
+  .section-heading {
+    gap: 25px;
+    margin-bottom: 44px;
+  }
+
+  .section-heading h2,
+  .visit-title h2,
+  .workshop-copy h2 {
+    font-size: clamp(3.6rem, 18vw, 5.4rem);
+  }
+
+  .category-list {
+    grid-template-columns: 1fr;
+  }
+
+  .category-list > div .category-card,
+  .category-list > div:nth-child(3) .category-card {
+    border-right: 1px solid var(--ink);
+    border-left: 1px solid var(--ink);
+  }
+
+  .category-card {
+    min-height: 250px;
+  }
+
+  .category-card h3 {
+    margin-top: 55px;
+  }
+
+  .workshop-photo {
+    min-height: 470px;
+  }
+
+  .address-card,
+  .contact-card {
+    min-height: 340px;
+    padding: 27px;
+  }
+
+  .address-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .address-card p {
+    margin-bottom: 35px;
+  }
+
+  .address-card > a {
+    grid-column: 1;
+  }
+
+  .contact-card h3 {
+    font-size: 2.1rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-brand {
+    min-width: 0;
+    flex-wrap: wrap;
+    font-size: 2.2rem;
+  }
+
+  .footer-main > div {
+    grid-column: 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-bottom small {
+    text-align: left;
+  }
+
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+  }
+}

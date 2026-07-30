@@ -1,0 +1,262 @@
+.section-heading {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.section-heading h2,
+.visit-title h2 {
+  margin: 14px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4rem, 7.5vw, 7.3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.84;
+  text-transform: uppercase;
+}
+
+.section-heading > p {
+  max-width: 420px;
+  margin: 0 0 8px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #0b0b0b;
+}
+
+.category-card {
+  position: relative;
+  min-height: 320px;
+  padding: 24px 22px;
+  border-right: 1px solid #0b0b0b;
+  transition: background 220ms ease, color 220ms ease;
+}
+
+.category-list > div:first-child .category-card {
+  border-left: 1px solid #0b0b0b;
+}
+
+.category-card:hover {
+  background: var(--orange);
+  color: white;
+}
+
+.category-card > span {
+  font-size: 0.69rem;
+  font-weight: 800;
+}
+
+.category-card h3 {
+  margin: 92px 0 15px;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.category-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.category-card:hover p {
+  color: #fff;
+}
+
+.category-card a {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: grid;
+  width: 37px;
+  height: 37px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.availability {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.luthieria {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.luthieria-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: stretch;
+  gap: 7vw;
+}
+
+.workshop-photo {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.workshop-photo::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, #000c);
+  content: "";
+}
+
+.workshop-photo span {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  color: var(--lime);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workshop-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 32px;
+}
+
+.workshop-copy h2 {
+  margin: 16px 0 28px;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4.2rem, 7vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.83;
+  text-transform: uppercase;
+}
+
+.workshop-copy > p {
+  max-width: 540px;
+  margin: 0;
+  color: #aaa69f;
+  line-height: 1.75;
+}
+
+.workshop-copy ul {
+  margin: 34px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workshop-copy li {
+  display: flex;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ffffff22;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.workshop-copy li span {
+  color: var(--orange);
+  font-size: 0.68rem;
+}
+
+.workshop-copy small {
+  margin-top: 12px;
+  color: #76736e;
+}
+
+.visit-title {
+  margin-bottom: 65px;
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  border: 1px solid var(--ink);
+}
+
+.address-card,
+.contact-card {
+  min-height: 360px;
+  padding: 38px;
+}
+
+.address-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  border-right: 1px solid var(--ink);
+}
+
+.pin {
+  font-size: 2rem;
+}
+
+.address-card p,
+.contact-card > p {
+  margin: 6px 0 60px;
+  color: var(--orange);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.address-card h3,
+.contact-card h3 {
+  max-width: 580px;
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.3rem, 4vw, 4.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.address-card > a {
+  align-self: end;
+  grid-column: 2;
+  width: fit-content;
+  border-bottom: 1px solid;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--orange);
+  color: white;
+}
+
+.contact-card > p {
+  color: var(--ink);
+  margin-bottom: 34px;
+}
+
+.contact-card h3 {
+  margin-bottom: auto;
+  font-size: 2.6rem;
+}
+
+.contact-card a {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  border-bottom: 1px solid #ffffff66;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
