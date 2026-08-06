@@ -52,6 +52,8 @@ test("keeps animation progressive and code modular", async () => {
     readFile(new URL("styles/hero.css", root), "utf8"),
   ]);
   assert.match(hero, /data-ticker-group/);
+  assert.match(hero, /Do primeiro acorde ao palco/);
+  assert.match(hero, /Para tocar\. Para criar\. Para sentir\./);
   assert.match(heroStyles, /translateX\(-50%\)/);
   assert.match(heroStyles, /min-width: 100vw/);
 

@@ -6,7 +6,18 @@ import { useRef } from "react";
 import { CONTACT } from "../data/site";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const TICKER_ITEMS = ["Novos e usados", "Luthieria", "Bragança Paulista"];
+const TICKER_ITEMS = [
+  "Novos e usados",
+  "Cordas",
+  "Percussão",
+  "Áudio e amplificação",
+  "Acessórios",
+  "Luthieria",
+  "Bragança Paulista",
+  "Música que conecta",
+  "Do primeiro acorde ao palco",
+  "Para tocar. Para criar. Para sentir.",
+];
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);

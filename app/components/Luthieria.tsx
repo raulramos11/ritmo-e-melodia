@@ -10,8 +10,8 @@ export function Luthieria() {
       <div className="luthieria-grid shell">
         <Reveal className="workshop-photo">
           <Image
-            src={`${basePath}/store-wall.jpg`}
-            alt="Parede com instrumentos musicais"
+            src={`${basePath}/luthieria-acoustic-unsplash.jpg`}
+            alt="Violão acústico iluminado pela luz natural"
             fill
             unoptimized
             sizes="(max-width: 800px) 100vw, 46vw"

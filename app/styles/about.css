@@ -1,7 +1,7 @@
 .about {
   overflow: hidden;
-  background: var(--orange);
-  color: white;
+  background: var(--sage-soft);
+  color: var(--ink);
 }
 
 .about-intro {
@@ -13,7 +13,7 @@
 }
 
 .about .eyebrow {
-  color: var(--ink);
+  color: var(--sage);
 }
 
 .about-title h2 {
@@ -28,7 +28,7 @@
 }
 
 .about-title em {
-  color: var(--lime);
+  color: var(--sage);
   font-style: normal;
 }
 
@@ -43,7 +43,7 @@
 
 .about-story .about-lead {
   margin-bottom: 22px;
-  color: var(--ink);
+  color: var(--sage);
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 800;
   line-height: 1.35;

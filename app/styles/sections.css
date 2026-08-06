@@ -123,15 +123,16 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: #173b42;
+  background: var(--sage);
   content: "";
   mix-blend-mode: color;
-  opacity: 0.18;
+  opacity: 0.1;
   pointer-events: none;
 }
 
 .workshop-photo img {
-  filter: saturate(0.58) contrast(1.07) brightness(0.82);
+  object-position: 56% center;
+  filter: saturate(0.72) contrast(1.04) brightness(0.86);
 }
 
 .workshop-photo span {

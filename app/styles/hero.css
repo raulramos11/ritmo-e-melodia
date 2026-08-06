@@ -191,7 +191,7 @@
   display: flex;
   width: max-content;
   align-items: center;
-  animation: marquee 26s linear infinite;
+  animation: marquee 42s linear infinite;
   will-change: transform;
 }
 
@@ -200,9 +200,8 @@
   flex: none;
   min-width: 100vw;
   align-items: center;
-  justify-content: space-around;
-  gap: 30px;
-  padding: 14px 30px 14px 0;
+  gap: 34px;
+  padding: 14px 34px 14px 0;
   font-family: var(--font-display), sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.1em;
@@ -213,7 +212,7 @@
   display: inline-flex;
   flex: none;
   align-items: center;
-  gap: 30px;
+  gap: 34px;
   white-space: nowrap;
 }
 

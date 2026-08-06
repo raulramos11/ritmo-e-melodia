@@ -13,7 +13,7 @@
   .about-intro,
   .about-values,
   .visit-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-grid {
@@ -165,7 +165,7 @@
   }
 
   .workshop-photo {
-    min-height: 470px;
+    min-height: 360px;
   }
 
   .address-card,
