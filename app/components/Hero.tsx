@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { CONTACT } from "../data/site";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const TICKER_ITEMS = ["Novos e usados", "Luthieria", "Bragança Paulista"];
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -69,12 +70,22 @@ export function Hero() {
       </div>
 
       <div className="ticker" aria-label="Destaques da loja">
-        <div>
-          <span>Novos e usados</span><b>✦</b>
-          <span>Luthieria</span><b>✦</b>
-          <span>Bragança Paulista</span><b>✦</b>
-          <span>Novos e usados</span><b>✦</b>
-          <span>Luthieria</span><b>✦</b>
+        <div className="ticker-track">
+          {[0, 1].map((group) => (
+            <div
+              className="ticker-group"
+              data-ticker-group
+              aria-hidden={group === 1 ? "true" : undefined}
+              key={group}
+            >
+              {TICKER_ITEMS.map((item) => (
+                <span className="ticker-item" key={item}>
+                  <span>{item}</span>
+                  <b aria-hidden="true">✦</b>
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>

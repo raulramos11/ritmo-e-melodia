@@ -72,6 +72,10 @@
     padding-block: 82px;
   }
 
+  .categories.section {
+    padding-block: 64px 76px;
+  }
+
   .nav {
     min-height: 72px;
   }

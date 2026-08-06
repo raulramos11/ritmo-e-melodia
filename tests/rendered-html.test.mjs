@@ -47,6 +47,14 @@ test("keeps animation progressive and code modular", async () => {
   assert.match(reveal, /whileInView/);
   assert.ok(files.length >= 7);
 
+  const [hero, heroStyles] = await Promise.all([
+    readFile(new URL("Hero.tsx", components), "utf8"),
+    readFile(new URL("styles/hero.css", root), "utf8"),
+  ]);
+  assert.match(hero, /data-ticker-group/);
+  assert.match(heroStyles, /translateX\(-50%\)/);
+  assert.match(heroStyles, /min-width: 100vw/);
+
   for (const directory of ["components", "data", "styles"]) {
     for (const file of await readdir(new URL(`${directory}/`, root))) {
       const source = await readFile(new URL(`${directory}/${file}`, root), "utf8");
