@@ -4,6 +4,7 @@ import "./globals.css";
 import "./styles/base.css";
 import "./styles/hero.css";
 import "./styles/sections.css";
+import "./styles/about.css";
 import "./styles/footer.css";
 import "./styles/responsive.css";
 
@@ -30,9 +31,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(publicSiteUrl),
   openGraph: {
     title: "Ritmo & Melodia",
-    description: "Instrumentos, acessórios e luthieria em Bragança Paulista.",
+    description:
+      "Instrumentos, acessórios e luthieria: música que conecta em Bragança Paulista.",
     images: [
-      { url: `${publicBasePath}/social-card.png`, width: 1733, height: 909 },
+      {
+        url: `${publicBasePath}/social-card-v2.png`,
+        width: 1733,
+        height: 909,
+        alt: "Ritmo & Melodia — Música que conecta",
+      },
     ],
   },
 };

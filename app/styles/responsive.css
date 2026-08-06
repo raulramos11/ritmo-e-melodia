@@ -10,6 +10,8 @@
   .hero-grid,
   .luthieria-grid,
   .section-heading,
+  .about-intro,
+  .about-values,
   .visit-grid {
     grid-template-columns: 1fr;
   }
@@ -42,6 +44,14 @@
   .address-card {
     border-right: 0;
     border-bottom: 1px solid var(--ink);
+  }
+
+  .about-intro {
+    gap: 38px;
+  }
+
+  .about-values {
+    gap: 45px;
   }
 
   .footer-main {
@@ -113,8 +123,23 @@
 
   .section-heading h2,
   .visit-title h2,
-  .workshop-copy h2 {
+  .workshop-copy h2,
+  .about-title h2 {
     font-size: clamp(3.6rem, 18vw, 5.4rem);
+  }
+
+  .about-intro {
+    padding-block: 82px 68px;
+  }
+
+  .about-values,
+  .mission {
+    padding-block: 68px;
+  }
+
+  .value-item {
+    grid-template-columns: 42px 1fr;
+    min-height: 72px;
   }
 
   .category-list {

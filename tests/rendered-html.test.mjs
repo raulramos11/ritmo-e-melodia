@@ -23,6 +23,9 @@ test("renders the business page and verified contact paths", async () => {
   assert.match(html, /Seu som/);
   assert.match(html, /Instrumentos novos e usados/);
   assert.match(html, /Luthieria/);
+  assert.match(html, /Mais que uma loja/);
+  assert.match(html, /Atendimento personalizado/);
+  assert.match(html, /fortalecendo a cultura musical/);
   assert.match(html, /4032-7834/);
   assert.match(html, /Residencial das Ilhas/);
   assert.match(html, /ritmoemelodiainstrumentos/);

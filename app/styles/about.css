@@ -1,0 +1,134 @@
+.about {
+  overflow: hidden;
+  background: var(--orange);
+  color: white;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 7vw;
+  align-items: end;
+  padding-block: 120px 90px;
+}
+
+.about .eyebrow {
+  color: var(--ink);
+}
+
+.about-title h2 {
+  max-width: 850px;
+  margin: 16px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4.2rem, 7.8vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+.about-title em {
+  color: var(--lime);
+  font-style: normal;
+}
+
+.about-story {
+  padding-bottom: 8px;
+}
+
+.about-story p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.about-story .about-lead {
+  margin-bottom: 22px;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 7vw;
+  padding-block: 80px;
+  border-top: 1px solid #0b0b0b;
+}
+
+.values-heading h3 {
+  max-width: 430px;
+  margin: 18px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.6rem, 4.2vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.values-list {
+  border-top: 1px solid #0b0b0b;
+}
+
+.value-item {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 16px;
+  align-items: center;
+  min-height: 78px;
+  border-bottom: 1px solid #0b0b0b;
+}
+
+.value-item span {
+  color: var(--ink);
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+.value-item p {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  font-weight: 800;
+}
+
+.mission {
+  position: relative;
+  padding-block: 90px 100px;
+  border-top: 1px solid #0b0b0b;
+}
+
+.mission::after {
+  position: absolute;
+  right: -28px;
+  bottom: -62px;
+  color: #0b0b0b;
+  content: "♪";
+  font-family: Georgia, serif;
+  font-size: clamp(12rem, 28vw, 27rem);
+  line-height: 1;
+  opacity: 0.1;
+  transform: rotate(-8deg);
+}
+
+.mission blockquote {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 24px 0 34px;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(3.2rem, 6.3vw, 6.6rem);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.mission-note {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.7;
+}

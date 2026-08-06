@@ -26,6 +26,7 @@ export function Hero() {
         </a>
         <div className="nav-links">
           <a href="#instrumentos">Instrumentos</a>
+          <a href="#sobre">Sobre nós</a>
           <a href="#luthieria">Luthieria</a>
           <a href="#visite">Visite</a>
         </div>

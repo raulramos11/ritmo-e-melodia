@@ -30,3 +30,11 @@ export const CATEGORIES = [
     description: "Cordas, cabos, palhetas e itens essenciais para tocar.",
   },
 ] as const;
+
+export const DIFFERENTIALS = [
+  "Atendimento personalizado",
+  "Profissionais experientes",
+  "Produtos selecionados com qualidade garantida",
+  "Ambiente acolhedor para músicos",
+  "Apoio à cena musical local",
+] as const;
