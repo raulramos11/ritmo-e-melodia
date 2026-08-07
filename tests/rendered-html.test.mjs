@@ -56,6 +56,7 @@ test("keeps animation progressive and code modular", async () => {
   assert.match(hero, /Para tocar\. Para criar\. Para sentir\./);
   assert.match(heroStyles, /translateX\(-50%\)/);
   assert.match(heroStyles, /min-width: 100vw/);
+  assert.match(heroStyles, /writing-mode: vertical-rl/);
 
   for (const directory of ["components", "data", "styles"]) {
     for (const file of await readdir(new URL(`${directory}/`, root))) {

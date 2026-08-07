@@ -117,7 +117,9 @@
   }
 
   .visual-note {
-    right: -66px;
+    right: 14px;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
   }
 
   .section-heading {
