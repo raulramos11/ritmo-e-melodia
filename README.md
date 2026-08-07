@@ -30,8 +30,12 @@ Validação completa:
 ```bash
 npm run build
 npm run lint
+npm run test:colors
 node --test tests/rendered-html.test.mjs
 ```
+
+As regras de aplicação da paleta, os papéis dos tokens e os contrastes medidos
+ficam registrados em [`docs/color-system.md`](docs/color-system.md).
 
 Também existe um `Dockerfile` de build para ambientes com Docker disponível:
 

@@ -47,9 +47,11 @@ test("keeps animation progressive and code modular", async () => {
   assert.match(reveal, /whileInView/);
   assert.ok(files.length >= 7);
 
-  const [hero, heroStyles] = await Promise.all([
+  const [hero, heroStyles, baseStyles, aboutStyles] = await Promise.all([
     readFile(new URL("Hero.tsx", components), "utf8"),
     readFile(new URL("styles/hero.css", root), "utf8"),
+    readFile(new URL("styles/base.css", root), "utf8"),
+    readFile(new URL("styles/about.css", root), "utf8"),
   ]);
   assert.match(hero, /data-ticker-group/);
   assert.match(hero, /Do primeiro acorde ao palco/);
@@ -57,6 +59,13 @@ test("keeps animation progressive and code modular", async () => {
   assert.match(heroStyles, /translateX\(-50%\)/);
   assert.match(heroStyles, /min-width: 100vw/);
   assert.match(heroStyles, /writing-mode: vertical-rl/);
+  assert.match(baseStyles, /--surface-raised: #1a1713/);
+  assert.match(baseStyles, /--text-secondary: #b3aea5/);
+  assert.match(baseStyles, /--action: #f14b24/);
+  assert.match(baseStyles, /--highlight: #d4f15d/);
+  assert.doesNotMatch(baseStyles, /--sage/);
+  assert.match(aboutStyles, /var\(--surface\)/);
+  assert.doesNotMatch(aboutStyles, /#47584b/);
 
   for (const directory of ["components", "data", "styles"]) {
     for (const file of await readdir(new URL(`${directory}/`, root))) {

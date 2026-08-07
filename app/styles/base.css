@@ -1,13 +1,14 @@
 :root {
-  --ink: #0b0b0b;
-  --paper: #f3eee4;
-  --orange: #f14b24;
-  --lime: #d4f15d;
-  --sage: #9aa99c;
-  --sage-deep: #1a211c;
-  --surface: #111310;
-  --line: #f3eee42e;
-  --muted: #aaa69f;
+  --background: #0b0b0b;
+  --surface: #12110f;
+  --surface-raised: #1a1713;
+  --text-primary: #f3eee4;
+  --text-secondary: #b3aea5;
+  --text-tertiary: #8f8a82;
+  --action: #f14b24;
+  --action-hover: #ff6a43;
+  --highlight: #d4f15d;
+  --border: #f3eee42e;
 }
 
 * {
@@ -22,8 +23,8 @@ html {
 body {
   margin: 0;
   overflow-x: clip;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--background);
+  color: var(--text-primary);
   font-family: var(--font-body), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -53,7 +54,7 @@ img {
 
 .eyebrow {
   margin: 0;
-  color: var(--lime);
+  color: var(--highlight);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -61,7 +62,7 @@ img {
 }
 
 .eyebrow.dark {
-  color: var(--lime);
+  color: var(--highlight);
 }
 
 .button {
@@ -83,24 +84,25 @@ img {
 }
 
 .button-primary {
-  border-color: var(--orange);
-  background: var(--orange);
-  color: white;
+  border-color: var(--action);
+  background: var(--action);
+  color: var(--background);
 }
 
 .button-primary:hover {
-  background: #ff603a;
+  border-color: var(--action-hover);
+  background: var(--action-hover);
 }
 
 .button-light {
-  border-color: var(--paper);
-  background: var(--paper);
-  color: var(--ink);
+  border-color: var(--text-primary);
+  background: var(--text-primary);
+  color: var(--background);
 }
 
 .button-light:hover {
-  background: var(--lime);
-  border-color: var(--lime);
+  background: var(--highlight);
+  border-color: var(--highlight);
 }
 
 .floating-whatsapp {
@@ -113,8 +115,8 @@ img {
   gap: 10px;
   padding: 13px 17px;
   border-radius: 99px;
-  background: var(--lime);
-  color: var(--ink);
+  background: var(--highlight);
+  color: var(--background);
   box-shadow: 0 10px 40px #0004;
   font-size: 0.77rem;
   font-weight: 800;
@@ -127,13 +129,13 @@ img {
   height: 23px;
   place-items: center;
   border-radius: 50%;
-  background: var(--ink);
-  color: var(--lime);
+  background: var(--background);
+  color: var(--highlight);
 }
 
 ::selection {
-  background: var(--orange);
-  color: white;
+  background: var(--action);
+  color: var(--background);
 }
 
 @media (prefers-reduced-motion: reduce) {

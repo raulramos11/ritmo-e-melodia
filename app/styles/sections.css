@@ -1,8 +1,8 @@
 .categories.section {
   position: relative;
   padding-block: 88px 104px;
-  border-bottom: 1px solid var(--line);
-  color: var(--paper);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
 }
 
 .section-heading {
@@ -27,36 +27,36 @@
 .section-heading > p {
   max-width: 420px;
   margin: 0 0 8px;
-  color: var(--muted);
+  color: var(--text-secondary);
   line-height: 1.75;
 }
 
 .category-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
 }
 
 .category-card {
   position: relative;
   min-height: 320px;
   padding: 24px 22px;
-  border-right: 1px solid var(--line);
+  border-right: 1px solid var(--border);
   background: #ffffff05;
   transition: background 220ms ease, color 220ms ease;
 }
 
 .category-list > div:first-child .category-card {
-  border-left: 1px solid var(--line);
+  border-left: 1px solid var(--border);
 }
 
 .category-card:hover {
-  background: var(--orange);
-  color: white;
+  background: var(--action);
+  color: var(--background);
 }
 
 .category-card > span {
-  color: var(--lime);
+  color: var(--highlight);
   font-size: 0.69rem;
   font-weight: 800;
 }
@@ -72,13 +72,14 @@
 
 .category-card p {
   margin: 0;
-  color: var(--muted);
+  color: var(--text-secondary);
   font-size: 0.82rem;
   line-height: 1.65;
 }
 
+.category-card:hover > span,
 .category-card:hover p {
-  color: #fff;
+  color: var(--background);
 }
 
 .category-card a {
@@ -95,14 +96,14 @@
 
 .availability {
   margin: 18px 0 0;
-  color: var(--muted);
+  color: var(--text-secondary);
   font-size: 0.72rem;
 }
 
 .luthieria {
-  border-bottom: 1px solid var(--line);
-  background: #0e0f0e;
-  color: var(--paper);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
 }
 
 .luthieria-grid {
@@ -129,16 +130,16 @@
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: var(--sage);
+  background: #2c211c;
   content: "";
   mix-blend-mode: color;
-  opacity: 0.1;
+  opacity: 0.06;
   pointer-events: none;
 }
 
 .workshop-photo img {
   object-position: 56% center;
-  filter: saturate(0.72) contrast(1.04) brightness(0.86);
+  filter: saturate(0.84) contrast(1.04) brightness(0.88);
 }
 
 .workshop-photo span {
@@ -147,7 +148,7 @@
   right: 24px;
   bottom: 24px;
   left: 24px;
-  color: var(--lime);
+  color: var(--highlight);
   font-family: var(--font-display), sans-serif;
   font-size: 1.35rem;
   letter-spacing: 0.08em;
@@ -174,7 +175,7 @@
 .workshop-copy > p {
   max-width: 540px;
   margin: 0;
-  color: #aaa69f;
+  color: var(--text-secondary);
   line-height: 1.75;
 }
 
@@ -188,17 +189,17 @@
   display: flex;
   gap: 18px;
   padding: 15px 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
   font-size: 0.88rem;
   font-weight: 700;
 }
 
 .workshop-copy li span {
-  color: var(--orange);
+  color: var(--action);
   font-size: 0.68rem;
 }
 
 .workshop-copy small {
   margin-top: 12px;
-  color: #76736e;
+  color: var(--text-tertiary);
 }

@@ -1,5 +1,5 @@
 .visit {
-  color: var(--paper);
+  color: var(--text-primary);
 }
 
 .visit-title {
@@ -9,7 +9,7 @@
 .visit-grid {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
 }
 
 .address-card,
@@ -22,19 +22,19 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 28px;
-  border-right: 1px solid var(--line);
+  border-right: 1px solid var(--border);
   background: var(--surface);
 }
 
 .pin {
-  color: var(--lime);
+  color: var(--highlight);
   font-size: 2rem;
 }
 
 .address-card p,
 .contact-card > p {
   margin: 6px 0 60px;
-  color: var(--orange);
+  color: var(--highlight);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -64,21 +64,21 @@
 }
 
 .address-card > a:hover {
-  color: var(--lime);
+  color: var(--action);
 }
 
 .contact-card {
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(circle at 85% 15%, #47584b45, transparent 38%),
-    var(--sage-deep);
-  color: var(--paper);
+    radial-gradient(circle at 85% 15%, #f14b2417, transparent 38%),
+    var(--surface-raised);
+  color: var(--text-primary);
 }
 
 .contact-card > p {
   margin-bottom: 34px;
-  color: var(--lime);
+  color: var(--highlight);
 }
 
 .contact-card h3 {
@@ -90,12 +90,12 @@
   display: flex;
   justify-content: space-between;
   padding: 13px 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
   font-size: 0.75rem;
   font-weight: 800;
   transition: color 180ms ease;
 }
 
 .contact-card a:hover {
-  color: var(--lime);
+  color: var(--action);
 }

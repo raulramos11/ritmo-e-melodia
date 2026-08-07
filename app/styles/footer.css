@@ -1,7 +1,7 @@
 footer {
-  border-top: 1px solid var(--line);
-  background: #080908;
-  color: var(--paper);
+  border-top: 1px solid var(--border);
+  background: var(--background);
+  color: var(--text-primary);
 }
 
 .footer-main {
@@ -18,7 +18,7 @@ footer {
 
 .footer-main p {
   margin: 8px 0 0;
-  color: #817e78;
+  color: var(--text-secondary);
   line-height: 1.7;
 }
 
@@ -35,7 +35,7 @@ footer {
 }
 
 .footer-main > div a:hover {
-  color: var(--lime);
+  color: var(--action);
 }
 
 .footer-bottom {
@@ -43,8 +43,8 @@ footer {
   justify-content: space-between;
   gap: 30px;
   padding-block: 20px;
-  border-top: 1px solid var(--line);
-  color: #6f6c67;
+  border-top: 1px solid var(--border);
+  color: var(--text-tertiary);
   font-size: 0.64rem;
 }
 

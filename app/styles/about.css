@@ -1,10 +1,10 @@
 .about {
   overflow: hidden;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(circle at 10% 16%, #47584b3d, transparent 34%),
-    var(--sage-deep);
-  color: var(--paper);
+    radial-gradient(circle at 10% 16%, #f14b2414, transparent 34%),
+    var(--surface);
+  color: var(--text-primary);
 }
 
 .about-intro {
@@ -16,7 +16,7 @@
 }
 
 .about .eyebrow {
-  color: var(--lime);
+  color: var(--highlight);
 }
 
 .about-title h2 {
@@ -31,7 +31,7 @@
 }
 
 .about-title em {
-  color: var(--sage);
+  color: var(--action);
   font-style: normal;
 }
 
@@ -41,13 +41,13 @@
 
 .about-story p {
   margin: 0;
-  color: #c9c7c0;
+  color: var(--text-secondary);
   line-height: 1.75;
 }
 
 .about-story .about-lead {
   margin-bottom: 22px;
-  color: var(--paper);
+  color: var(--text-primary);
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 800;
   line-height: 1.35;
@@ -58,7 +58,7 @@
   grid-template-columns: 0.7fr 1.3fr;
   gap: 7vw;
   padding-block: 80px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
 }
 
 .values-heading h3 {
@@ -72,7 +72,7 @@
 }
 
 .values-list {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
 }
 
 .value-item {
@@ -81,11 +81,11 @@
   gap: 16px;
   align-items: center;
   min-height: 78px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
 }
 
 .value-item span {
-  color: var(--lime);
+  color: var(--highlight);
   font-size: 0.67rem;
   font-weight: 800;
 }
@@ -99,14 +99,14 @@
 .mission {
   position: relative;
   padding-block: 90px 100px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
 }
 
 .mission::after {
   position: absolute;
   right: -28px;
   bottom: -62px;
-  color: var(--paper);
+  color: var(--text-primary);
   content: "♪";
   font-family: Georgia, serif;
   font-size: clamp(12rem, 28vw, 27rem);
@@ -132,7 +132,7 @@
   z-index: 1;
   max-width: 620px;
   margin: 0;
-  color: #c9c7c0;
+  color: var(--text-secondary);
   font-weight: 700;
   line-height: 1.7;
 }

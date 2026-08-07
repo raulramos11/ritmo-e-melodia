@@ -10,7 +10,8 @@
     "build": "node scripts/vinext.mjs build",
     "build:pages": "next build",
     "start": "node scripts/vinext.mjs start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && npm run test:colors && node --test tests/rendered-html.test.mjs",
+    "test:colors": "node scripts/check-color-contrast.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern outputs",
     "db:generate": "drizzle-kit generate"
   },
