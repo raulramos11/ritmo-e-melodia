@@ -5,7 +5,9 @@
   --lime: #d4f15d;
   --sage: #9aa99c;
   --sage-deep: #1a211c;
-  --muted: #777269;
+  --surface: #111310;
+  --line: #f3eee42e;
+  --muted: #aaa69f;
 }
 
 * {
@@ -20,8 +22,8 @@ html {
 body {
   margin: 0;
   overflow-x: clip;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   font-family: var(--font-body), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -59,7 +61,7 @@ img {
 }
 
 .eyebrow.dark {
-  color: var(--orange);
+  color: var(--lime);
 }
 
 .button {

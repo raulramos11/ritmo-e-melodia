@@ -34,16 +34,16 @@
   }
 
   .category-list > div:nth-child(3) .category-card {
-    border-left: 1px solid var(--ink);
+    border-left: 1px solid var(--line);
   }
 
   .category-card {
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line);
   }
 
   .address-card {
     border-right: 0;
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line);
   }
 
   .about-intro {
@@ -152,8 +152,8 @@
 
   .category-list > div .category-card,
   .category-list > div:nth-child(3) .category-card {
-    border-right: 1px solid var(--ink);
-    border-left: 1px solid var(--ink);
+    border-right: 1px solid var(--line);
+    border-left: 1px solid var(--line);
   }
 
   .category-card {

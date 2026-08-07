@@ -5,6 +5,7 @@ import "./styles/base.css";
 import "./styles/hero.css";
 import "./styles/sections.css";
 import "./styles/about.css";
+import "./styles/visit.css";
 import "./styles/footer.css";
 import "./styles/responsive.css";
 

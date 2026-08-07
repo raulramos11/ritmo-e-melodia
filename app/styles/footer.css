@@ -1,5 +1,6 @@
 footer {
-  background: var(--ink);
+  border-top: 1px solid var(--line);
+  background: #080908;
   color: var(--paper);
 }
 
@@ -29,12 +30,20 @@ footer {
   text-transform: uppercase;
 }
 
+.footer-main > div a {
+  transition: color 180ms ease;
+}
+
+.footer-main > div a:hover {
+  color: var(--lime);
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   padding-block: 20px;
-  border-top: 1px solid #ffffff1f;
+  border-top: 1px solid var(--line);
   color: #6f6c67;
   font-size: 0.64rem;
 }

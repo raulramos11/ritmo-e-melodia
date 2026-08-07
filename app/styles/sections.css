@@ -1,5 +1,8 @@
 .categories.section {
+  position: relative;
   padding-block: 88px 104px;
+  border-bottom: 1px solid var(--line);
+  color: var(--paper);
 }
 
 .section-heading {
@@ -31,19 +34,20 @@
 .category-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid #0b0b0b;
+  border-top: 1px solid var(--line);
 }
 
 .category-card {
   position: relative;
   min-height: 320px;
   padding: 24px 22px;
-  border-right: 1px solid #0b0b0b;
+  border-right: 1px solid var(--line);
+  background: #ffffff05;
   transition: background 220ms ease, color 220ms ease;
 }
 
 .category-list > div:first-child .category-card {
-  border-left: 1px solid #0b0b0b;
+  border-left: 1px solid var(--line);
 }
 
 .category-card:hover {
@@ -52,6 +56,7 @@
 }
 
 .category-card > span {
+  color: var(--lime);
   font-size: 0.69rem;
   font-weight: 800;
 }
@@ -95,7 +100,8 @@
 }
 
 .luthieria {
-  background: var(--ink);
+  border-bottom: 1px solid var(--line);
+  background: #0e0f0e;
   color: var(--paper);
 }
 
@@ -182,7 +188,7 @@
   display: flex;
   gap: 18px;
   padding: 15px 0;
-  border-bottom: 1px solid #ffffff22;
+  border-bottom: 1px solid var(--line);
   font-size: 0.88rem;
   font-weight: 700;
 }
@@ -195,88 +201,4 @@
 .workshop-copy small {
   margin-top: 12px;
   color: #76736e;
-}
-
-.visit-title {
-  margin-bottom: 65px;
-}
-
-.visit-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  border: 1px solid var(--ink);
-}
-
-.address-card,
-.contact-card {
-  min-height: 360px;
-  padding: 38px;
-}
-
-.address-card {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 28px;
-  border-right: 1px solid var(--ink);
-}
-
-.pin {
-  font-size: 2rem;
-}
-
-.address-card p,
-.contact-card > p {
-  margin: 6px 0 60px;
-  color: var(--orange);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.address-card h3,
-.contact-card h3 {
-  max-width: 580px;
-  margin: 0;
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(2.3rem, 4vw, 4.2rem);
-  font-weight: 400;
-  line-height: 0.95;
-  text-transform: uppercase;
-}
-
-.address-card > a {
-  align-self: end;
-  grid-column: 2;
-  width: fit-content;
-  border-bottom: 1px solid;
-  font-size: 0.76rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--orange);
-  color: white;
-}
-
-.contact-card > p {
-  color: var(--ink);
-  margin-bottom: 34px;
-}
-
-.contact-card h3 {
-  margin-bottom: auto;
-  font-size: 2.6rem;
-}
-
-.contact-card a {
-  display: flex;
-  justify-content: space-between;
-  padding: 13px 0;
-  border-bottom: 1px solid #ffffff66;
-  font-size: 0.75rem;
-  font-weight: 800;
 }
