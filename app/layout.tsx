@@ -30,6 +30,12 @@ export const metadata: Metadata = {
   description:
     "Instrumentos musicais novos e usados, acessórios e luthieria em Bragança Paulista.",
   metadataBase: new URL(publicSiteUrl),
+  icons: {
+    icon: {
+      url: `${publicBasePath}/favicon.png`,
+      type: "image/png",
+    },
+  },
   openGraph: {
     title: "Ritmo & Melodia",
     description:

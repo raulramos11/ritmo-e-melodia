@@ -20,6 +20,10 @@ test("renders the business page and verified contact paths", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Ritmo &amp; Melodia \| Instrumentos e Luthieria/);
+  assert.match(
+    html,
+    /<link rel="icon" href="[^"]*\/favicon\.png" type="image\/png"/,
+  );
   assert.match(html, /Seu som/);
   assert.match(html, /Instrumentos novos e usados/);
   assert.match(html, /Luthieria/);
