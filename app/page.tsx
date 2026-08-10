@@ -2,6 +2,7 @@ import { About } from "./components/About";
 import { Categories } from "./components/Categories";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
+import { InstagramFeed } from "./components/InstagramFeed";
 import { Luthieria } from "./components/Luthieria";
 import { SmoothScroll } from "./components/SmoothScroll";
 import { Visit } from "./components/Visit";
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Categories />
         <About />
+        <InstagramFeed />
         <Luthieria />
         <Visit />
       </main>

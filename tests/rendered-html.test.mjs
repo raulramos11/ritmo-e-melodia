@@ -29,10 +29,18 @@ test("renders the business page and verified contact paths", async () => {
   assert.match(html, /Luthieria/);
   assert.match(html, /Mais que uma loja/);
   assert.match(html, /Atendimento personalizado/);
-  assert.match(html, /fortalecendo a cultura musical/);
+  assert.match(html, /160 mil\+/);
+  assert.match(html, /DbscW4GTIkJ/);
+  assert.match(html, /DaoLSOUTcM-/);
+  assert.match(html, /DaQqBRaTKP1/);
   assert.match(html, /4032-7834/);
   assert.match(html, /Residencial das Ilhas/);
   assert.match(html, /ritmoemelodiainstrumentos/);
+  assert.doesNotMatch(html, /Nossa missão|fortalecendo a cultura musical/);
+  assert.ok(
+    html.indexOf('id="instagram"') < html.indexOf('id="luthieria"'),
+    "Instagram should replace the former mission position before luthieria",
+  );
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/);
 });
 
@@ -70,6 +78,15 @@ test("keeps animation progressive and code modular", async () => {
   assert.doesNotMatch(baseStyles, /--sage/);
   assert.match(aboutStyles, /var\(--surface\)/);
   assert.doesNotMatch(aboutStyles, /#47584b/);
+
+  const instagram = await readFile(
+    new URL("components/InstagramFeed.tsx", root),
+    "utf8",
+  );
+  assert.match(instagram, /graph\.facebook\.com\/v26\.0\/instagram_oembed/);
+  assert.match(instagram, /hidecaption=true/);
+  assert.match(instagram, /reel\.url}embed\//);
+  assert.doesNotMatch(instagram, /dangerouslySetInnerHTML|embed\.js/);
 
   for (const directory of ["components", "data", "styles"]) {
     for (const file of await readdir(new URL(`${directory}/`, root))) {

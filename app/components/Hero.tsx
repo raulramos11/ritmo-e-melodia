@@ -40,6 +40,7 @@ export function Hero() {
           <a href="#instrumentos">Instrumentos</a>
           <a href="#sobre">Sobre nós</a>
           <a href="#luthieria">Luthieria</a>
+          <a href="#instagram">Instagram</a>
           <a href="#visite">Visite</a>
         </div>
         <a className="nav-cta" href={CONTACT.whatsapp} target="_blank" rel="noreferrer">

@@ -8,6 +8,21 @@ export const CONTACT = {
     "https://www.google.com/maps/search/?api=1&query=Av.%20Dr.%20Tancredo%20de%20Almeida%20Neves%2C%20436%2C%20Bragan%C3%A7a%20Paulista%2C%20SP",
 } as const;
 
+export const INSTAGRAM_REELS = [
+  {
+    id: "DbscW4GTIkJ",
+    url: "https://www.instagram.com/reel/DbscW4GTIkJ/",
+  },
+  {
+    id: "DaoLSOUTcM-",
+    url: "https://www.instagram.com/reel/DaoLSOUTcM-/",
+  },
+  {
+    id: "DaQqBRaTKP1",
+    url: "https://www.instagram.com/reel/DaQqBRaTKP1/",
+  },
+] as const;
+
 export const CATEGORIES = [
   {
     number: "01",

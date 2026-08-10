@@ -45,18 +45,6 @@ export function About() {
           ))}
         </div>
       </div>
-
-      <Reveal className="mission shell">
-        <p className="eyebrow dark">Nossa missão</p>
-        <blockquote>
-          Levar música para a vida das pessoas, incentivando a paixão e
-          fortalecendo a cultura musical.
-        </blockquote>
-        <p className="mission-note">
-          A música transforma, conecta e cria histórias. Aqui você encontra
-          mais do que instrumentos — encontra inspiração.
-        </p>
-      </Reveal>
     </section>
   );
 }

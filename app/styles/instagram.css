@@ -1,0 +1,215 @@
+.instagram {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 90% 5%, #f14b2410, transparent 30%),
+    var(--background);
+}
+
+.instagram::before {
+  position: absolute;
+  top: 64px;
+  right: -130px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.instagram-heading {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.45fr);
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 58px;
+}
+
+.instagram-heading h2 {
+  margin: 16px 0 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4.5rem, 7.5vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+.instagram-heading h2 em {
+  color: var(--action);
+  font-style: normal;
+}
+
+.instagram-proof {
+  padding-left: 24px;
+  border-left: 1px solid var(--border);
+}
+
+.instagram-proof strong {
+  display: block;
+  color: var(--highlight);
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(3.4rem, 5vw, 5.6rem);
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.instagram-proof p {
+  margin: 14px 0 22px;
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.instagram-proof a,
+.instagram-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.instagram-proof a {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--action);
+}
+
+.instagram-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.instagram-card {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  background: var(--background);
+}
+
+.instagram-embed {
+  min-height: 570px;
+  background: #fff;
+}
+
+.instagram-embed iframe {
+  display: block;
+  width: 100% !important;
+  height: 640px;
+  min-width: 0 !important;
+  border: 0 !important;
+}
+
+.instagram-loading,
+.instagram-error {
+  display: grid;
+  min-height: 570px;
+  place-content: center;
+  padding: 30px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  text-align: center;
+}
+
+.instagram-loading span {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--highlight);
+  border-radius: 50%;
+  animation: instagram-spin 800ms linear infinite;
+}
+
+.instagram-error p {
+  margin: 0 0 18px;
+}
+
+.instagram-error a {
+  color: var(--highlight);
+  font-weight: 800;
+}
+
+.instagram-card-link {
+  min-height: 56px;
+  padding: 14px 2px;
+  border-top: 1px solid var(--border);
+}
+
+.instagram-card-link > span:first-child {
+  color: var(--highlight);
+}
+
+.instagram-card-link:hover,
+.instagram-proof a:hover {
+  color: var(--action-hover);
+}
+
+@keyframes instagram-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .instagram-heading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, minmax(310px, 1fr));
+    width: calc(100vw - 24px);
+    margin-right: calc(50% - 50vw);
+    padding-right: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .instagram-grid > div {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .instagram::before {
+    display: none;
+  }
+
+  .instagram-heading {
+    gap: 34px;
+    margin-bottom: 40px;
+  }
+
+  .instagram-heading h2 {
+    font-size: clamp(3rem, 14vw, 4rem);
+  }
+
+  .instagram-proof {
+    padding: 22px 0 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, minmax(286px, calc(100vw - 42px)));
+    gap: 12px;
+  }
+
+  .instagram-embed,
+  .instagram-embed iframe,
+  .instagram-loading,
+  .instagram-error {
+    min-height: 570px;
+    height: 570px;
+  }
+}
