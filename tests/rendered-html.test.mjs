@@ -95,3 +95,19 @@ test("keeps animation progressive and code modular", async () => {
     }
   }
 });
+
+test("keeps Hostinger deployment aligned with the official domain", async () => {
+  const [layout, workflow] = await Promise.all([
+    readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(
+      new URL("../.github/workflows/hostinger.yml", import.meta.url),
+      "utf8",
+    ),
+  ]);
+
+  assert.match(layout, /https:\/\/ritmoemelodia\.com/);
+  assert.match(workflow, /NEXT_PUBLIC_BASE_PATH: ""/);
+  assert.match(workflow, /NEXT_PUBLIC_SITE_URL: https:\/\/ritmoemelodia\.com/);
+  assert.match(workflow, /npm run build:pages/);
+  assert.match(workflow, /push origin hostinger/);
+});

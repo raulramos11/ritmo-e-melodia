@@ -1,0 +1,60 @@
+name: Build for Hostinger
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAGES: "true"
+      NEXT_PUBLIC_BASE_PATH: ""
+      NEXT_PUBLIC_SITE_URL: https://ritmoemelodia.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install --no-audit --no-fund
+      - run: npm run build:pages
+      - name: Publish static files to hostinger branch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          publish_dir="$(mktemp -d)"
+
+          if git ls-remote --exit-code --heads origin hostinger >/dev/null; then
+            git fetch --depth=1 origin hostinger
+            git worktree add -B hostinger "$publish_dir" FETCH_HEAD
+          else
+            git worktree add --detach "$publish_dir"
+            git -C "$publish_dir" switch --orphan hostinger
+          fi
+
+          git -C "$publish_dir" rm -rf .
+          cp -a out/. "$publish_dir/"
+          touch "$publish_dir/.nojekyll"
+
+          git -C "$publish_dir" config user.name "github-actions[bot]"
+          git -C "$publish_dir" config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$publish_dir" add -A
+
+          if git -C "$publish_dir" diff --cached --quiet; then
+            exit 0
+          fi
+
+          git -C "$publish_dir" commit -m \
+            "Deploy Hostinger from ${GITHUB_SHA::7}"
+          git -C "$publish_dir" push origin hostinger

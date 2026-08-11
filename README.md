@@ -63,3 +63,9 @@ somente no servidor. Essa modalidade não deve expor tokens no GitHub Pages.
 O projeto mantém a configuração de hospedagem privada do Sites e uma exportação
 estática para GitHub Pages. Os ativos respeitam `NEXT_PUBLIC_BASE_PATH` quando o
 site é servido em um subcaminho.
+
+O domínio oficial `https://ritmoemelodia.com` é publicado pela branch gerada
+`hostinger`. O workflow `.github/workflows/hostinger.yml` recompila a branch
+`main` com base path vazio e envia somente o conteúdo estático de `out/` para
+essa branch. No hPanel, a integração Git deve apontar para `hostinger`, com
+diretório raiz `public_html`; a branch não deve ser editada manualmente.

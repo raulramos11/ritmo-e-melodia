@@ -22,8 +22,7 @@ const body = Manrope({
 });
 
 const publicSiteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://ritmo-e-melodia-bp.magaohehe.chatgpt.site";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ritmoemelodia.com";
 const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
