@@ -37,12 +37,12 @@ jobs:
           if git ls-remote --exit-code --heads origin hostinger >/dev/null; then
             git fetch --depth=1 origin hostinger
             git worktree add -B hostinger "$publish_dir" FETCH_HEAD
+            git -C "$publish_dir" rm -rf .
           else
             git worktree add --detach "$publish_dir"
             git -C "$publish_dir" switch --orphan hostinger
           fi
 
-          git -C "$publish_dir" rm -rf .
           cp -a out/. "$publish_dir/"
           touch "$publish_dir/.nojekyll"
 
