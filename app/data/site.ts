@@ -10,16 +10,16 @@ export const CONTACT = {
 
 export const INSTAGRAM_REELS = [
   {
+    id: "Db8Mi9tTQ6v",
+    url: "https://www.instagram.com/reel/Db8Mi9tTQ6v/",
+  },
+  {
     id: "DbscW4GTIkJ",
     url: "https://www.instagram.com/reel/DbscW4GTIkJ/",
   },
   {
     id: "DaoLSOUTcM-",
     url: "https://www.instagram.com/reel/DaoLSOUTcM-/",
-  },
-  {
-    id: "DaQqBRaTKP1",
-    url: "https://www.instagram.com/reel/DaQqBRaTKP1/",
   },
 ] as const;
 

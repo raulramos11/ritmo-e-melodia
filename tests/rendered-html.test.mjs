@@ -30,9 +30,10 @@ test("renders the business page and verified contact paths", async () => {
   assert.match(html, /Mais que uma loja/);
   assert.match(html, /Atendimento personalizado/);
   assert.match(html, /160 mil\+/);
+  assert.match(html, /Db8Mi9tTQ6v/);
   assert.match(html, /DbscW4GTIkJ/);
   assert.match(html, /DaoLSOUTcM-/);
-  assert.match(html, /DaQqBRaTKP1/);
+  assert.doesNotMatch(html, /DaQqBRaTKP1/);
   assert.match(html, /4032-7834/);
   assert.match(html, /Residencial das Ilhas/);
   assert.match(html, /ritmoemelodiainstrumentos/);
