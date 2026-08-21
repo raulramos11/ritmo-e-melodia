@@ -69,13 +69,26 @@ export function Hero() {
           style={reduced ? undefined : { y: imageY }}
         >
           <Image
-            src={`${basePath}/guitar-close.jpg`}
-            alt="Detalhe de uma guitarra"
+            src={`${basePath}/media/hero-poster.webp`}
+            alt="Músico tocando guitarra na Ritmo e Melodia"
             fill
             unoptimized
             priority
             sizes="(max-width: 800px) 100vw, 48vw"
           />
+          <video
+            className="hero-video"
+            aria-hidden="true"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={`${basePath}/media/hero-poster.webp`}
+            preload="metadata"
+            tabIndex={-1}
+          >
+            <source src={`${basePath}/media/hero-guitarra.mp4`} type="video/mp4" />
+          </video>
           <span className="visual-note">Para tocar. Para criar. Para sentir.</span>
           <span className="disc" aria-hidden="true"><i>R&M</i></span>
         </motion.div>

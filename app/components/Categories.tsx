@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { CATEGORIES, CONTACT } from "../data/site";
 import { Reveal } from "./Reveal";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function Categories() {
   return (
@@ -13,6 +16,17 @@ export function Categories() {
           Seja para começar, evoluir ou subir no palco, encontre opções para
           continuar fazendo música.
         </p>
+      </Reveal>
+
+      <Reveal className="category-photo">
+        <Image
+          src={`${basePath}/media/loja-instrumentos.webp`}
+          alt="Instrumentos e teclados disponíveis na Ritmo e Melodia"
+          fill
+          unoptimized
+          sizes="(max-width: 800px) 100vw, 1240px"
+        />
+        <span>Instrumentos para diferentes estilos e momentos.</span>
       </Reveal>
 
       <div className="category-list">

@@ -28,6 +28,13 @@ test("renders the business page and verified contact paths", async () => {
   assert.match(html, /<meta name="twitter:card" content="summary_large_image"/);
   assert.doesNotMatch(html, /ritmo-e-melodia\/ritmo-e-melodia\/og\.png/);
   assert.match(html, /Seu som/);
+  assert.match(html, /media\/hero-guitarra\.mp4/);
+  assert.match(html, /media\/hero-poster\.webp/);
+  assert.match(html, /media\/loja-marca\.webp/);
+  assert.match(html, /media\/loja-instrumentos\.webp/);
+  assert.match(html, /media\/oficina-guitarra\.webp/);
+  assert.match(html, /<video[^>]*autoplay[^>]*loop[^>]*muted[^>]*playsinline/i);
+  assert.doesNotMatch(html, /guitar-close\.jpg|luthieria-acoustic-unsplash\.jpg/);
   assert.match(html, /Instrumentos novos e usados/);
   assert.match(html, /Luthieria/);
   assert.match(html, /Mais que uma loja/);
@@ -75,6 +82,8 @@ test("keeps animation progressive and code modular", async () => {
   assert.match(heroStyles, /translateX\(-50%\)/);
   assert.match(heroStyles, /min-width: 100vw/);
   assert.match(heroStyles, /writing-mode: vertical-rl/);
+  assert.match(heroStyles, /prefers-reduced-motion: reduce/);
+  assert.match(heroStyles, /\.hero-video[\s\S]*display: none/);
   assert.match(baseStyles, /--background: #0e0c0a/);
   assert.match(baseStyles, /--surface-raised: #211a14/);
   assert.match(baseStyles, /--text-secondary: #cfc2ae/);

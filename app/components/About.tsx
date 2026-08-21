@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { DIFFERENTIALS } from "../data/site";
 import { Reveal } from "./Reveal";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function About() {
   return (
@@ -27,6 +30,17 @@ export function About() {
           </p>
         </Reveal>
       </div>
+
+      <Reveal className="about-photo shell">
+        <Image
+          src={`${basePath}/media/loja-marca.webp`}
+          alt="Placa da Ritmo e Melodia ao lado de um violão"
+          fill
+          unoptimized
+          sizes="(max-width: 800px) 100vw, 1240px"
+        />
+        <span>Uma loja feita por quem vive música.</span>
+      </Reveal>
 
       <div className="about-values shell">
         <Reveal className="values-heading">

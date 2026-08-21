@@ -53,6 +53,38 @@
   line-height: 1.35;
 }
 
+.about-photo {
+  position: relative;
+  height: clamp(340px, 48vw, 620px);
+  overflow: hidden;
+}
+
+.about-photo::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 52%, #0e0c0ad9);
+  content: "";
+}
+
+.about-photo img {
+  object-fit: cover;
+  object-position: 58% 54%;
+  filter: saturate(0.78) contrast(1.04) brightness(0.83);
+}
+
+.about-photo span {
+  position: absolute;
+  z-index: 1;
+  right: 28px;
+  bottom: 25px;
+  left: 28px;
+  color: var(--highlight);
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .about-values {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;

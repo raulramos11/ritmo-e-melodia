@@ -4,6 +4,12 @@ Site institucional da Ritmo & Melodia Instrumentos Musicais, em Bragança
 Paulista. A página apresenta as categorias da loja, seu relacionamento com os
 músicos, diferenciais, Reels do Instagram, luthieria e canais de contato.
 
+As imagens principais são registros reais da Ritmo & Melodia. A capa usa um
+trecho curto e sem áudio de `DSCN1054.MOV`, otimizado para web, com uma foto do
+mesmo ensaio como alternativa estática para conexões lentas e preferência por
+movimento reduzido. As seções de instrumentos, história e luthieria também usam
+fotos selecionadas do acervo da empresa.
+
 ## Conteúdo verificado
 
 - instrumentos novos e usados, acessórios e luthieria;
