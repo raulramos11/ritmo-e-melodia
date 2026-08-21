@@ -124,5 +124,5 @@ test("keeps production and staging deployments isolated", async () => {
   assert.doesNotMatch(workflow, /branches: \["staging"\]/);
   assert.match(stagingWorkflow, /branches: \["staging"\]/);
   assert.match(stagingWorkflow, /NEXT_PUBLIC_BASE_PATH: \/ritmo-e-melodia/);
-  assert.match(stagingWorkflow, /actions\/deploy-pages@v4/);
+  assert.match(stagingWorkflow, /actions\/deploy-pages@v5/);
 });

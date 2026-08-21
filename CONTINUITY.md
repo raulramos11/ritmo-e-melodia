@@ -67,3 +67,4 @@
 - 2026-08-21T10:22:00-03:00 [TOOL] GitHub Actions run `32486139842` succeeded after the branch-policy correction and deployed the `staging` commit.
 - 2026-08-21T10:22:00-03:00 [TOOL] GitHub Pages staging returns HTTP 200 with theme `#0e0c0a`, `og.png`, and favicon; production returns HTTP 200 with its prior `#0b0b0b` theme and prior social card.
 - 2026-08-21T10:22:00-03:00 [TOOL] Private Sites version 9 deployment `appgdep_6a885088ed3c8191b39d97c112795475` succeeded at the existing Sites URL.
+- 2026-08-21T10:25:00-03:00 [CODE] Official GitHub actions were updated to Node 24-compatible majors (`checkout@v7`, `setup-node@v7`, `upload-pages-artifact@v5`, `deploy-pages@v5`) after the staging run emitted a Node 20 deprecation warning.
