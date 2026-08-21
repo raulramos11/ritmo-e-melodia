@@ -1,10 +1,10 @@
 # Snapshot
 - 2026-08-21T10:55:39-03:00 [USER] Goal: select the best authentic photos from the supplied Drive folder and add real movement to the homepage hero without changing Hostinger production.
-- 2026-08-21T10:55:39-03:00 [TOOL] Current state: 100 photos and 3 videos were reviewed; `DSCN1054.MOV` was selected for the hero and four authentic stills were selected for hero fallback, products, story, and luthieria.
+- 2026-08-21T11:01:56-03:00 [TOOL] Current state: commit `e1eca0b` is published on `staging`; GitHub Pages and private Sites version 10 contain the selected authentic media while Hostinger production remains unchanged.
 - 2026-08-21T10:55:39-03:00 [CODE] The hero uses a muted, looping, inline 12-second MP4 (1.55 MB) with a 51 KB WebP poster; reduced-motion users receive only the static poster.
 - 2026-08-21T10:55:39-03:00 [CODE] Instrument, brand, and workshop sections now use optimized WebP assets from the company's Drive folder.
 - 2026-08-21T10:55:39-03:00 [TOOL] Vinext build, lint, three rendered tests, ten WCAG color checks, and GitHub Pages static export pass.
-- 2026-08-21T10:55:39-03:00 [CODE] Next action: commit and publish only `staging`, verify the test URLs, and leave `main`/Hostinger production unchanged.
+- 2026-08-21T11:01:56-03:00 [CODE] Next action: collect user approval on the two test URLs; do not merge to `main` without approval.
 - 2026-08-21T10:55:39-03:00 [CODE] Open questions: none.
 
 # Decisions
@@ -19,13 +19,13 @@
 - 2026-08-21T10:55:39-03:00 [USER] D009 ACTIVE: use `DSCN1054.MOV` as the authentic hero motion and keep all media changes isolated to `staging` until approval.
 
 # Done (recent)
-- 2026-08-10T23:09:00-03:00 [CODE] Fixed initial orphan-branch publication in commit `dce32f106842487f78b672099d9f882567125f7f`.
 - 2026-08-10T23:10:00-03:00 [TOOL] GitHub build and branch publication completed successfully.
 - 2026-08-10T23:12:00-03:00 [TOOL] Reconnected Hostinger from `main` to `hostinger` and deployed the generated static branch.
 - 2026-08-10T23:12:00-03:00 [TOOL] Verified production HTML and four live URLs with HTTP 200.
 - 2026-08-13T12:35:00-03:00 [MILESTONE] Published Reel `Db8Mi9tTQ6v` to production through commit `165542b`, workflow `31715961298`, and generated Hostinger commit `0fe5b98`.
 - 2026-08-21T10:22:00-03:00 [MILESTONE] Completed and published the black/beige visual system, social preview, isolated staging branch, and two test URLs without changing Hostinger production.
 - 2026-08-21T10:55:39-03:00 [CODE] Selected and optimized authentic company media, implemented the motion hero and three real-photo sections, and completed local validation.
+- 2026-08-21T11:01:56-03:00 [MILESTONE] Published authentic-media staging commit `e1eca0b`, GitHub Actions run `32489548833`, and private Sites version 10; production remained unchanged.
 
 # Working set
 - 2026-08-21T10:55:39-03:00 [CODE] `app/components/Hero.tsx`
@@ -46,7 +46,6 @@
 - 2026-08-21T10:22:00-03:00 [TOOL] Symptoms: initial staging Pages deploy was rejected; Evidence: GitHub environment allowed only `main`; Mitigation: added the `staging` branch policy without removing `main` and reran only failed jobs; Status: CLOSED.
 
 # Receipts
-- 2026-08-10T23:07:00-03:00 [TOOL] Hostinger static build passed with empty base path, official-domain metadata, 14/14 local references, favicon, social card, and Google verification file.
 - 2026-08-10T23:07:00-03:00 [TOOL] `npm.cmd test` passed 3 tests, all color checks passed, and `npm.cmd run lint` exited 0.
 - 2026-08-10T23:08:00-03:00 [TOOL] Dry-run and actual push of `b9ab26b` to `origin/main` succeeded.
 - 2026-08-10T23:09:00-03:00 [TOOL] First Hostinger workflow run `31451444465` failed only because `git rm` ran on an empty orphan branch; production was unaffected.
@@ -66,3 +65,4 @@
 - 2026-08-21T10:25:00-03:00 [CODE] Official GitHub actions were updated to Node 24-compatible majors (`checkout@v7`, `setup-node@v7`, `upload-pages-artifact@v5`, `deploy-pages@v5`) after the staging run emitted a Node 20 deprecation warning.
 - 2026-08-21T10:55:39-03:00 [TOOL] Reviewed 100 JPGs and 3 MOVs from the user-provided Drive folder; selected `DSCN1054.MOV`, `DSCN1055.JPG`, `DSCN1037.JPG`, `DSCN1025.JPG`, and `DSCN1098.JPG`.
 - 2026-08-21T10:55:39-03:00 [TOOL] Final media totals 1.93 MB; Vinext build, lint, all tests, color checks, and GitHub Pages export passed with correct repository base paths.
+- 2026-08-21T11:01:56-03:00 [TOOL] GitHub Pages and its MP4 returned HTTP 200 with the new authentic assets; production returned HTTP 200 and did not contain `hero-guitarra.mp4`.
