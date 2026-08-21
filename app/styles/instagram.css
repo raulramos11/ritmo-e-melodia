@@ -3,7 +3,7 @@
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(circle at 90% 5%, #f14b2410, transparent 30%),
+    radial-gradient(circle at 90% 5%, #c8ad8610, transparent 30%),
     var(--background);
 }
 

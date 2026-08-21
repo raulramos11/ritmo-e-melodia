@@ -24,6 +24,9 @@ test("renders the business page and verified contact paths", async () => {
     html,
     /<link rel="icon" href="[^"]*\/favicon\.png" type="image\/png"/,
   );
+  assert.match(html, /<meta property="og:image" content="[^"]*\/og\.png"/);
+  assert.match(html, /<meta name="twitter:card" content="summary_large_image"/);
+  assert.doesNotMatch(html, /ritmo-e-melodia\/ritmo-e-melodia\/og\.png/);
   assert.match(html, /Seu som/);
   assert.match(html, /Instrumentos novos e usados/);
   assert.match(html, /Luthieria/);
@@ -72,10 +75,12 @@ test("keeps animation progressive and code modular", async () => {
   assert.match(heroStyles, /translateX\(-50%\)/);
   assert.match(heroStyles, /min-width: 100vw/);
   assert.match(heroStyles, /writing-mode: vertical-rl/);
-  assert.match(baseStyles, /--surface-raised: #1a1713/);
-  assert.match(baseStyles, /--text-secondary: #b3aea5/);
-  assert.match(baseStyles, /--action: #f14b24/);
-  assert.match(baseStyles, /--highlight: #d4f15d/);
+  assert.match(baseStyles, /--background: #0e0c0a/);
+  assert.match(baseStyles, /--surface-raised: #211a14/);
+  assert.match(baseStyles, /--text-secondary: #cfc2ae/);
+  assert.match(baseStyles, /--action: #d8c4a7/);
+  assert.match(baseStyles, /--highlight: #c8ad86/);
+  assert.doesNotMatch(baseStyles, /#f14b24|#d4f15d/);
   assert.doesNotMatch(baseStyles, /--sage/);
   assert.match(aboutStyles, /var\(--surface\)/);
   assert.doesNotMatch(aboutStyles, /#47584b/);
@@ -97,18 +102,27 @@ test("keeps animation progressive and code modular", async () => {
   }
 });
 
-test("keeps Hostinger deployment aligned with the official domain", async () => {
-  const [layout, workflow] = await Promise.all([
+test("keeps production and staging deployments isolated", async () => {
+  const [layout, workflow, stagingWorkflow] = await Promise.all([
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(
       new URL("../.github/workflows/hostinger.yml", import.meta.url),
       "utf8",
     ),
+    readFile(
+      new URL("../.github/workflows/staging.yml", import.meta.url),
+      "utf8",
+    ),
   ]);
 
   assert.match(layout, /https:\/\/ritmoemelodia\.com/);
+  assert.match(workflow, /branches: \["main"\]/);
   assert.match(workflow, /NEXT_PUBLIC_BASE_PATH: ""/);
   assert.match(workflow, /NEXT_PUBLIC_SITE_URL: https:\/\/ritmoemelodia\.com/);
   assert.match(workflow, /npm run build:pages/);
   assert.match(workflow, /push origin hostinger/);
+  assert.doesNotMatch(workflow, /branches: \["staging"\]/);
+  assert.match(stagingWorkflow, /branches: \["staging"\]/);
+  assert.match(stagingWorkflow, /NEXT_PUBLIC_BASE_PATH: \/ritmo-e-melodia/);
+  assert.match(stagingWorkflow, /actions\/deploy-pages@v4/);
 });

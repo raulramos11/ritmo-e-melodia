@@ -2,7 +2,7 @@
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(circle at 10% 16%, #f14b2414, transparent 34%),
+    radial-gradient(circle at 10% 16%, #c8ad8614, transparent 34%),
     var(--surface);
   color: var(--text-primary);
 }

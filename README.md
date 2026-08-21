@@ -69,3 +69,16 @@ O domínio oficial `https://ritmoemelodia.com` é publicado pela branch gerada
 `main` com base path vazio e envia somente o conteúdo estático de `out/` para
 essa branch. No hPanel, a integração Git deve apontar para `hostinger`, com
 diretório raiz `public_html`; a branch não deve ser editada manualmente.
+
+### Ambiente de teste
+
+Mudanças visuais e de conteúdo devem começar na branch `staging`. Cada envio
+para essa branch atualiza a prévia em
+`https://raulramos11.github.io/ritmo-e-melodia/`, sem disparar o workflow da
+Hostinger e sem alterar `https://ritmoemelodia.com`.
+
+Depois da aprovação da prévia, a mudança pode ser incorporada à branch `main`.
+Somente esse passo aciona a geração da branch `hostinger` e a publicação no
+domínio oficial. A ferramenta automática de staging da Hostinger é voltada a
+WordPress; para este site estático, a branch e a URL de prévia mantêm produção e
+homologação separadas.

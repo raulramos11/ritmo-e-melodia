@@ -2,7 +2,7 @@
   min-height: 100svh;
   overflow: hidden;
   background:
-    radial-gradient(circle at 12% 90%, #f14b241c, transparent 32%),
+    radial-gradient(circle at 12% 90%, #c8ad861c, transparent 32%),
     var(--background);
   color: var(--text-primary);
 }
@@ -130,7 +130,7 @@
 .hero-visual::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, var(--background) 0%, transparent 30%, transparent 72%, #0b0b0b33);
+  background: linear-gradient(90deg, var(--background) 0%, transparent 30%, transparent 72%, #0e0c0a33);
   content: "";
 }
 
@@ -160,7 +160,7 @@
   place-items: center;
   border: 1px solid #ffffff88;
   border-radius: 50%;
-  background: #0b0b0bcc;
+  background: #0e0c0acc;
   color: var(--action);
   animation: spin 14s linear infinite;
 }
