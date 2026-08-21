@@ -1,6 +1,6 @@
 # Snapshot
 - 2026-08-21T10:55:39-03:00 [USER] Goal: select the best authentic photos from the supplied Drive folder and add real movement to the homepage hero without changing Hostinger production.
-- 2026-08-21T11:01:56-03:00 [TOOL] Current state: commit `e1eca0b` is published on `staging`; GitHub Pages and private Sites version 10 contain the selected authentic media while Hostinger production remains unchanged.
+- 2026-08-21T11:01:56-03:00 [TOOL] Current state: the authenticated-media change is published on `staging`; GitHub Pages and the latest private Sites deployment contain the selected authentic media while Hostinger production remains unchanged.
 - 2026-08-21T10:55:39-03:00 [CODE] The hero uses a muted, looping, inline 12-second MP4 (1.55 MB) with a 51 KB WebP poster; reduced-motion users receive only the static poster.
 - 2026-08-21T10:55:39-03:00 [CODE] Instrument, brand, and workshop sections now use optimized WebP assets from the company's Drive folder.
 - 2026-08-21T10:55:39-03:00 [TOOL] Vinext build, lint, three rendered tests, ten WCAG color checks, and GitHub Pages static export pass.
@@ -25,7 +25,7 @@
 - 2026-08-13T12:35:00-03:00 [MILESTONE] Published Reel `Db8Mi9tTQ6v` to production through commit `165542b`, workflow `31715961298`, and generated Hostinger commit `0fe5b98`.
 - 2026-08-21T10:22:00-03:00 [MILESTONE] Completed and published the black/beige visual system, social preview, isolated staging branch, and two test URLs without changing Hostinger production.
 - 2026-08-21T10:55:39-03:00 [CODE] Selected and optimized authentic company media, implemented the motion hero and three real-photo sections, and completed local validation.
-- 2026-08-21T11:01:56-03:00 [MILESTONE] Published authentic-media staging commit `e1eca0b`, GitHub Actions run `32489548833`, and private Sites version 10; production remained unchanged.
+- 2026-08-21T11:01:56-03:00 [MILESTONE] Published the authentic-media staging change through GitHub Pages and a private Sites deployment; production remained unchanged.
 
 # Working set
 - 2026-08-21T10:55:39-03:00 [CODE] `app/components/Hero.tsx`
