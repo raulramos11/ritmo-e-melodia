@@ -1,11 +1,11 @@
 # Snapshot
 - 2026-08-21T10:12:58-03:00 [USER] Goal: align the site with the company's black-and-beige identity and create a test environment without changing the live Hostinger site.
-- 2026-08-21T10:12:58-03:00 [CODE] Current state: work is isolated on `staging`; production remains on `main` -> generated `hostinger` branch.
+- 2026-08-21T10:22:00-03:00 [TOOL] Current state: commit `ea8f70c` is published on `staging`; GitHub Pages and private Sites version 9 are online while production remains on `main` -> generated `hostinger` branch.
 - 2026-08-21T10:12:58-03:00 [CODE] The active palette now uses warm black, coffee surfaces, beige text/actions, and wood-tone highlights derived from the supplied black-and-beige favicon.
 - 2026-08-21T10:12:58-03:00 [CODE] A branded 1200x630 `public/og.png` and matching Open Graph/X metadata replace the previous social preview.
 - 2026-08-21T10:12:58-03:00 [CODE] `.github/workflows/staging.yml` publishes only `staging` to the GitHub Pages test URL; Hostinger automation still accepts only `main`.
 - 2026-08-21T10:12:58-03:00 [TOOL] Build, lint, static export, three rendered tests, and ten WCAG color-pair checks pass; Docker is unavailable on this host.
-- 2026-08-21T10:12:58-03:00 [CODE] Next action: publish and validate the staging URLs; do not merge to `main` without user approval.
+- 2026-08-21T10:22:00-03:00 [CODE] Next action: collect user approval on the staging URL; do not merge to `main` without approval.
 - 2026-08-21T10:12:58-03:00 [CODE] Open questions: none.
 
 # Decisions
@@ -25,7 +25,7 @@
 - 2026-08-10T23:12:00-03:00 [TOOL] Reconnected Hostinger from `main` to `hostinger` and deployed the generated static branch.
 - 2026-08-10T23:12:00-03:00 [TOOL] Verified production HTML and four live URLs with HTTP 200.
 - 2026-08-13T12:35:00-03:00 [MILESTONE] Published Reel `Db8Mi9tTQ6v` to production through commit `165542b`, workflow `31715961298`, and generated Hostinger commit `0fe5b98`.
-- 2026-08-21T10:12:58-03:00 [CODE] Completed the black/beige visual system, social preview, staging branch, deployment isolation test, and staging documentation.
+- 2026-08-21T10:22:00-03:00 [MILESTONE] Completed and published the black/beige visual system, social preview, isolated staging branch, and two test URLs without changing Hostinger production.
 
 # Working set
 - 2026-08-10T12:06:00-03:00 [CODE] `app/components/InstagramFeed.tsx`
@@ -45,6 +45,7 @@
 - 2026-08-10T12:06:00-03:00 [TOOL] Symptoms: none active; Evidence: all project validations pass; Mitigation: none required; Status: CLOSED.
 - 2026-08-10T22:54:36-03:00 [TOOL] Symptoms: Hostinger preview shows `403 Forbidden`; Evidence: deployment log contains clone, Composer, and publish only, while the repository root has no `index.html` and requires `npm run build:pages`; Mitigation: publish the built static output or use Hostinger Node.js Web App deployment; Status: OPEN pending user choice.
 - 2026-08-10T23:12:00-03:00 [TOOL] SUPERSEDES the open 403 incident: Symptoms resolved; Evidence: Hostinger deployed `hostinger` commit `2a4afee` and all production checks return HTTP 200; Mitigation: generated branch plus automatic workflow; Status: CLOSED.
+- 2026-08-21T10:22:00-03:00 [TOOL] Symptoms: initial staging Pages deploy was rejected; Evidence: GitHub environment allowed only `main`; Mitigation: added the `staging` branch policy without removing `main` and reran only failed jobs; Status: CLOSED.
 
 # Receipts
 - 2026-08-10T12:13:28-03:00 [MILESTONE] Instagram revision and GitHub Pages deployment verified at `f939702` and run `31402149182`.
@@ -63,3 +64,6 @@
 - 2026-08-13T12:35:00-03:00 [TOOL] Live desktop and 390 px mobile checks loaded the new Instagram iframe first and measured `scrollWidth == clientWidth`.
 - 2026-08-21T10:12:58-03:00 [TOOL] New palette minimum verified contrast is 6.99:1 for tertiary text on surface; action beige on background is 11.50:1.
 - 2026-08-21T10:12:58-03:00 [TOOL] Hostinger official documentation confirms built-in staging is WordPress-specific; static sites can use an independent subdomain or branch-based preview.
+- 2026-08-21T10:22:00-03:00 [TOOL] GitHub Actions run `32486139842` succeeded after the branch-policy correction and deployed the `staging` commit.
+- 2026-08-21T10:22:00-03:00 [TOOL] GitHub Pages staging returns HTTP 200 with theme `#0e0c0a`, `og.png`, and favicon; production returns HTTP 200 with its prior `#0b0b0b` theme and prior social card.
+- 2026-08-21T10:22:00-03:00 [TOOL] Private Sites version 9 deployment `appgdep_6a885088ed3c8191b39d97c112795475` succeeded at the existing Sites URL.
