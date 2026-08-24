@@ -28,21 +28,25 @@ export const CATEGORIES = [
     number: "01",
     title: "Cordas",
     description: "Violões, guitarras, baixos e opções para diferentes estilos.",
+    image: "DSCN1015.JPG",
   },
   {
     number: "02",
     title: "Percussão",
     description: "Instrumentos e acessórios para colocar cada música no ritmo.",
+    image: "DSCN1042.JPG",
   },
   {
     number: "03",
     title: "Áudio e amplificação",
     description: "Soluções para ensaio, palco, estudo e apresentações.",
+    image: "DSCN1048.JPG",
   },
   {
     number: "04",
     title: "Acessórios",
     description: "Cordas, cabos, palhetas e itens essenciais para tocar.",
+    image: "DSCN1080.JPG",
   },
 ] as const;
 
