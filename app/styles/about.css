@@ -2,7 +2,7 @@
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(circle at 10% 16%, #f14b2414, transparent 34%),
+    radial-gradient(circle at 10% 16%, #a84a1714, transparent 34%),
     var(--surface);
   color: var(--text-primary);
 }
@@ -22,12 +22,11 @@
 .about-title h2 {
   max-width: 850px;
   margin: 16px 0 0;
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(4.2rem, 7.8vw, 8rem);
-  font-weight: 400;
+  font-family: var(--font-display), serif;
+  font-size: clamp(3.2rem, 5.6vw, 5.6rem);
+  font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 0.82;
-  text-transform: uppercase;
+  line-height: 1.02;
 }
 
 .about-title em {

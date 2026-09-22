@@ -20,7 +20,7 @@ export function Categories() {
       <div className="category-list">
         {CATEGORIES.map((category, index) => (
           <Reveal key={category.title} delay={index * 0.06}>
-            <article className="category-card" style={{ backgroundImage: `url(${basePath}/media/${category.image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0,0,0,0.7)' }}>
+            <article className="category-card" style={{ backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 70%), url(${basePath}/media/${category.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <span>{category.number}</span>
               <h3>{category.title}</h3>
               <p>{category.description}</p>

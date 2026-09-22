@@ -1,11 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import Image from "next/image";
 import { useRef } from "react";
 import { CONTACT } from "../data/site";
+import { HeroVideo } from "./HeroVideo";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const TICKER_ITEMS = [
   "Novos e usados",
   "Cordas",
@@ -39,6 +38,7 @@ export function Hero() {
         <div className="nav-links">
           <a href="#instrumentos">Instrumentos</a>
           <a href="#sobre">Sobre nós</a>
+          <a href="#loja">A loja</a>
           <a href="#luthieria">Luthieria</a>
           <a href="#instagram">Instagram</a>
           <a href="#visite">Visite</a>
@@ -68,26 +68,7 @@ export function Hero() {
           className="hero-visual"
           style={reduced ? undefined : { y: imageY }}
         >
-          <video
-            className="hero-video"
-            aria-hidden="true"
-            autoPlay
-            muted
-            playsInline
-            onEnded={() => {
-              const videoEl = document.querySelector('.hero-video') as HTMLVideoElement;
-              if (videoEl) {
-                const currentSrc = videoEl.src;
-                const nextSrc = currentSrc.includes('hero-guitarra.mp4') ? `${basePath}/media/IMG_3299.mp4` : `${basePath}/media/hero-guitarra.mp4`;
-                videoEl.src = nextSrc;
-                videoEl.play();
-              }
-            }}
-            poster={`${basePath}/media/hero-poster.webp`}
-            tabIndex={-1}
-            style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", left: 0, top: 0 }}
-            src={`${basePath}/media/hero-guitarra.mp4`}
-          />
+          <HeroVideo />
           <span className="visual-note">Para tocar. Para criar. Para sentir.</span>
           <span className="disc" aria-hidden="true"><i>R&M</i></span>
         </motion.div>

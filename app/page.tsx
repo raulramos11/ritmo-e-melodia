@@ -1,6 +1,7 @@
 import { About } from "./components/About";
 import { Categories } from "./components/Categories";
 import { Footer } from "./components/Footer";
+import { Gallery } from "./components/Gallery";
 import { Hero } from "./components/Hero";
 import { InstagramFeed } from "./components/InstagramFeed";
 import { Luthieria } from "./components/Luthieria";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Categories />
         <About />
+        <Gallery />
         <InstagramFeed />
         <Luthieria />
         <Visit />

@@ -1,18 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Bebas_Neue, Manrope } from "next/font/google";
+import { Lora, Manrope } from "next/font/google";
 import "./globals.css";
 import "./styles/base.css";
 import "./styles/hero.css";
 import "./styles/sections.css";
+import "./styles/gallery.css";
 import "./styles/about.css";
 import "./styles/instagram.css";
 import "./styles/visit.css";
 import "./styles/footer.css";
 import "./styles/responsive.css";
 
-const display = Bebas_Neue({
+const display = Lora({
   variable: "--font-display",
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0b0b0b",
+  themeColor: "#f1e8d6",
 };
 
 export default function RootLayout({
