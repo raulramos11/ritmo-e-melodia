@@ -45,11 +45,10 @@
 .contact-card h3 {
   max-width: 580px;
   margin: 0;
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(2.3rem, 4vw, 4.2rem);
-  font-weight: 400;
-  line-height: 0.95;
-  text-transform: uppercase;
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.1rem, 3.4vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.08;
 }
 
 .address-card > a {
@@ -71,7 +70,7 @@
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(circle at 85% 15%, #f14b2417, transparent 38%),
+    radial-gradient(circle at 85% 15%, #a84a1717, transparent 38%),
     var(--surface-raised);
   color: var(--text-primary);
 }

@@ -72,10 +72,10 @@ test("keeps animation progressive and code modular", async () => {
   assert.match(heroStyles, /translateX\(-50%\)/);
   assert.match(heroStyles, /min-width: 100vw/);
   assert.match(heroStyles, /writing-mode: vertical-rl/);
-  assert.match(baseStyles, /--surface-raised: #1a1713/);
-  assert.match(baseStyles, /--text-secondary: #b3aea5/);
-  assert.match(baseStyles, /--action: #f14b24/);
-  assert.match(baseStyles, /--highlight: #d4f15d/);
+  assert.match(baseStyles, /--surface-raised: #ded0b6/);
+  assert.match(baseStyles, /--text-secondary: #6b5847/);
+  assert.match(baseStyles, /--action: #9c4415/);
+  assert.match(baseStyles, /--highlight: #895825/);
   assert.doesNotMatch(baseStyles, /--sage/);
   assert.match(aboutStyles, /var\(--surface\)/);
   assert.doesNotMatch(aboutStyles, /#47584b/);

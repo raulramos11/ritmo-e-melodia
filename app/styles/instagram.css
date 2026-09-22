@@ -3,7 +3,7 @@
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(circle at 90% 5%, #f14b2410, transparent 30%),
+    radial-gradient(circle at 90% 5%, #a84a1710, transparent 30%),
     var(--background);
 }
 
@@ -31,12 +31,11 @@
 
 .instagram-heading h2 {
   margin: 16px 0 0;
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(4.5rem, 7.5vw, 8rem);
-  font-weight: 400;
+  font-family: var(--font-display), serif;
+  font-size: clamp(3.2rem, 5.4vw, 5.6rem);
+  font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 0.82;
-  text-transform: uppercase;
+  line-height: 1.02;
 }
 
 .instagram-heading h2 em {

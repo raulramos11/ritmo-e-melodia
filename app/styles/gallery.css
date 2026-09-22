@@ -1,0 +1,128 @@
+.gallery.section {
+  padding-block: 88px 104px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.gallery-carousel {
+  position: relative;
+  margin-top: 8px;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-block: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-track:focus-visible {
+  outline: 2px solid var(--action);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+.gallery-item {
+  position: relative;
+  margin: 0;
+  flex: 0 0 auto;
+  width: min(70vw, 760px);
+  height: clamp(340px, 62vh, 620px);
+  overflow: hidden;
+  border-radius: 16px;
+  background: #3a24180d;
+  border: 1px solid var(--border);
+  scroll-snap-align: center;
+}
+
+.gallery-item img {
+  object-fit: contain;
+  transition: transform 420ms ease, filter 420ms ease;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+  filter: saturate(1) contrast(1.04);
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 20px #3a241826;
+  transition: background 200ms ease, transform 200ms ease, color 200ms ease;
+}
+
+.gallery-nav:hover {
+  background: var(--action);
+  color: var(--background);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.gallery-nav:focus-visible {
+  outline: 2px solid var(--action);
+  outline-offset: 2px;
+}
+
+.gallery-nav--prev {
+  left: -8px;
+}
+
+.gallery-nav--next {
+  right: -8px;
+}
+
+.gallery-hint {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .gallery-item {
+    width: 82vw;
+    height: clamp(300px, 54vh, 520px);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-track {
+    gap: 12px;
+  }
+
+  .gallery-item {
+    width: 90vw;
+    height: clamp(260px, 52vh, 440px);
+  }
+
+  /* on touch screens the swipe is the primary control — hide arrows */
+  .gallery-nav {
+    display: none;
+  }
+
+  .gallery-hint {
+    display: block;
+  }
+}

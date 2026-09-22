@@ -28,25 +28,25 @@ export const CATEGORIES = [
     number: "01",
     title: "Cordas",
     description: "Violões, guitarras, baixos e opções para diferentes estilos.",
-    image: "DSCN1015.JPG",
+    image: "foto-02.webp",
   },
   {
     number: "02",
     title: "Percussão",
     description: "Instrumentos e acessórios para colocar cada música no ritmo.",
-    image: "DSCN1042.JPG",
+    image: "foto-06.webp",
   },
   {
     number: "03",
     title: "Áudio e amplificação",
     description: "Soluções para ensaio, palco, estudo e apresentações.",
-    image: "DSCN1048.JPG",
+    image: "foto-07.webp",
   },
   {
     number: "04",
     title: "Acessórios",
     description: "Cordas, cabos, palhetas e itens essenciais para tocar.",
-    image: "DSCN1080.JPG",
+    image: "foto-05.webp",
   },
 ] as const;
 
@@ -56,4 +56,22 @@ export const DIFFERENTIALS = [
   "Produtos selecionados com qualidade garantida",
   "Ambiente acolhedor para músicos",
   "Apoio à cena musical local",
+] as const;
+
+export const GALLERY = [
+  { src: "foto-01.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (1)" },
+  { src: "foto-02.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (2)" },
+  { src: "foto-03.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (3)" },
+  { src: "foto-04.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (4)" },
+  { src: "foto-05.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (5)" },
+  { src: "foto-06.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (6)" },
+  { src: "foto-07.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (7)" },
+  { src: "foto-08.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (8)" },
+  { src: "foto-09.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (9)" },
+  { src: "foto-10.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (10)" },
+  { src: "foto-11.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (11)" },
+  { src: "foto-12.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (12)" },
+  { src: "foto-13.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (13)" },
+  { src: "foto-14.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (14)" },
+  { src: "foto-15.webp", alt: "Instrumentos e ambiente da loja Ritmo e Melodia (15)" },
 ] as const;
