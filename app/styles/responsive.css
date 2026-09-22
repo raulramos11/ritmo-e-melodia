@@ -33,14 +33,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .category-list > div:nth-child(3) .category-card {
-    border-left: 1px solid var(--border);
-  }
-
-  .category-card {
-    border-bottom: 1px solid var(--border);
-  }
-
   .address-card {
     border-right: 0;
     border-bottom: 1px solid var(--border);
@@ -149,20 +141,6 @@
 
   .category-list {
     grid-template-columns: 1fr;
-  }
-
-  .category-list > div .category-card,
-  .category-list > div:nth-child(3) .category-card {
-    border-right: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-  }
-
-  .category-card {
-    min-height: 250px;
-  }
-
-  .category-card h3 {
-    margin-top: 55px;
   }
 
   .workshop-photo {

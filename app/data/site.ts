@@ -34,7 +34,7 @@ export const CATEGORIES = [
     number: "02",
     title: "Percussão",
     description: "Instrumentos e acessórios para colocar cada música no ritmo.",
-    image: "foto-10.webp",
+    image: "foto-06.webp",
   },
   {
     number: "03",

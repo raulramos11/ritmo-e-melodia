@@ -20,13 +20,22 @@ export function Categories() {
       <div className="category-list">
         {CATEGORIES.map((category, index) => (
           <Reveal key={category.title} delay={index * 0.06}>
-            <article className="category-card" style={{ backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 70%), url(${basePath}/media/${category.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              <span>{category.number}</span>
-              <h3>{category.title}</h3>
-              <p>{category.description}</p>
-              <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${category.title} pelo WhatsApp`}>
-                ↗
-              </a>
+            <article className="category-card">
+              <div className="category-photo">
+                <img
+                  src={`${basePath}/media/${category.image}`}
+                  alt={category.title}
+                  loading="lazy"
+                />
+                <span className="category-number">{category.number}</span>
+              </div>
+              <div className="category-body">
+                <h3>{category.title}</h3>
+                <p>{category.description}</p>
+                <a href={CONTACT.whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${category.title} pelo WhatsApp`}>
+                  ↗
+                </a>
+              </div>
             </article>
           </Reveal>
         ))}
