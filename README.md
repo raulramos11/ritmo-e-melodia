@@ -1,8 +1,34 @@
 # Ritmo & Melodia
 
-Site institucional da Ritmo & Melodia Instrumentos Musicais, em Bragança
-Paulista. A página apresenta as categorias da loja, seu relacionamento com os
-músicos, diferenciais, Reels do Instagram, luthieria e canais de contato.
+Site oficial da **Ritmo & Melodia Instrumentos Musicais e Luthieria**, loja
+física em Bragança Paulista — SP. O site está **em produção** no domínio
+[ritmoemelodia.com](https://ritmoemelodia.com) e apresenta as categorias da
+loja, seu relacionamento com os músicos, diferenciais, Reels do Instagram,
+luthieria e canais de contato.
+
+Projeto real, entregue e mantido: uma landing page institucional de página
+única, focada em performance, acessibilidade e uma identidade visual coerente,
+que converte visitas em contato direto com a loja pelo WhatsApp.
+
+## Stack e destaques técnicos
+
+- **Next.js 16 + React 19** em arquitetura de componentes de servidor, com
+  build estático exportável.
+- **TypeScript** em todo o código de aplicação.
+- **Tailwind CSS 4** com um sistema de cores documentado e verificado por
+  contraste (WCAG) — as regras, os papéis dos tokens e os contrastes medidos
+  ficam em [`docs/color-system.md`](docs/color-system.md) e são validados por um
+  teste automatizado (`npm run test:colors`).
+- **Animações com `motion`** e rolagem suave com `lenis`, respeitando
+  `prefers-reduced-motion` para acessibilidade.
+- **Vídeo do hero** otimizado com poster e alternância de fontes, mantendo o
+  carregamento leve.
+- **Integração com o Instagram** via oEmbed oficial da Meta, validada no cliente
+  e sem armazenar tokens ou credenciais.
+- **Deploy estático automatizado** para GitHub Pages e para o domínio próprio
+  via Hostinger, com base path configurável por ambiente.
+- **Testes** de renderização de HTML e de contraste de cores no pipeline de
+  validação.
 
 ## Conteúdo verificado
 
